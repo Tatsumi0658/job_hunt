@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to:"colums#index"
   resources :colums do
     resources :comments
   end
