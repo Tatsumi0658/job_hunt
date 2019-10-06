@@ -1,13 +1,12 @@
-<div class= field>
-  <%= @colum.title %>
-  <%= @colum.name %>
-  <%= simple_format(@colum.content) %>
+<div class= "single-colum_area">
+  <h3 class="single-colum_title"><%= @colum.title %></h3>
+  <p class="single-colum_author"><%= @colum.name %>さん</p>
+  <%= simple_format(@colum.content, class:"single-colum_content") %>
+  <p class="single-colum_date"><%= @colum.created_at.strftime("%Y/%m/%d %R") %></p>
 
   <div id="comments_area">
-    <!-- 投稿されたコメント一覧をブログの詳細ページに表示するためのrender -->
     <%= render partial: 'comments/index', locals: { comments: @comments, colum: @colum } %>
   </div>
 
-  <!-- コメント入力欄をブログの詳細ページに表示するためのrender -->
   <%= render partial: 'comments/form', locals: { comment: @comment, colum: @colum } %>
 </div>

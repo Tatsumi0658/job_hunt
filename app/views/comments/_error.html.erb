@@ -1,15 +1,16 @@
-<ul>
+<div class="comment-list">
   <% comments.each do |comment| %>
     <% if comment.id.present? %>
-      <li>
-        <p><%= simple_format(comment.comment) %></p>
-        <p>
-          <%= comment.name %>
-          </p>
-      </li>
+      <div class="comment-item">
+        <p class="comment_author"><%= comment.name %>さん</p>
+        <%= simple_format(comment.comment, class:"comment_content") %>
+        <p class="comment_date">
+          <%= comment.created_at.strftime("%Y/%m/%d %R") %>
+        </p>
+      </div>
     <% end %>
   <% end %>
-</ul>
-<p>
+  <p class="error_msg">
   投稿できませんでした
   </p>
+</div>

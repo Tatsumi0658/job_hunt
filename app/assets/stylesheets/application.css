@@ -13,3 +13,74 @@
  *= require_tree .
  *= require_self
  */
+
+ html,body{
+   margin: 0;
+   padding: 0;
+ }
+ header{
+   background: rgba(0,146,199,1);
+   box-sizing: border-box;
+   height: 80px;
+   padding: 15px;
+ }
+ header a{
+   color: #fff;
+   font-size: 2.0rem;
+   text-decoration: none;
+ }
+ .container{
+   margin: 0 auto;
+ }
+ .colum-item{
+   border-bottom: 1px solid #eee;
+   margin: 1.4rem 0;
+   padding: 0 1.0rem .5rem;
+ }
+ .colum_title a{
+   color: #333;
+   text-decoration: none;
+ }
+ .colum_date{
+   color: #a0a0a0;
+   font-size: .8rem;
+   margin-top:  8px;
+   text-align: right;
+ }
+ .single-colum_area{
+   margin: 0 auto;
+ }
+ .single-colum_title{
+   color: #333;
+   font-size: 1.8rem;
+ }
+ .single-colum_author, .single-colum_content, .comment_content{
+   color: #333;
+   font-size: 1.0rem;
+ }
+ .single-colum_content{
+   margin: 1.0rem 0;
+ }
+ .single-colum_date, .comment_date{
+   color: #a0a0a0;
+   font-size: .8rem;
+   text-align: right;
+ }
+ @media screen and (max-width: 767px){
+   .container{
+     width: 100%;
+   }
+   .single-colum_area{
+     width: 95%;
+   }
+ }
+ @media screen and (min-width: 768px) and (max-width: 1024px){
+   .container{
+     width: 90%;
+   }
+ }
+ @media screen and (min-width: 1025px){
+   .container{
+     width: 1024px;
+   }
+ }

@@ -1,5 +1,12 @@
-<% @colums.each do |colum| %>
-  <%= colum.title %>
-  <%= colum.name %>
-  <%= link_to "show", colum_path(colum.id) %>
-<% end %>
+<div class="colum-list">
+  <% @colums.each do |colum| %>
+    <div class="colum-item">
+      <h3 class="colum_title">
+        <%= link_to colum.title, colum_path(colum.id) %>
+      </h3>
+      <p class="colum_date">
+        <%= colum.created_at.strftime("%Y/%m/%d %R") %>
+        </p>
+    </div>
+  <% end %>
+</div>

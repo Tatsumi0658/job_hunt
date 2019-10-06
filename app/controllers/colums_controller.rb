@@ -1,7 +1,7 @@
 class ColumsController < ApplicationController
   before_action :set_colum, only:[:show]
   def index
-    @colums = Colum.all
+    @colums = Colum.all.order(created_at: "DESC")
   end
 
   def new
