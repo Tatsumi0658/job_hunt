@@ -1,0 +1,15 @@
+<ul>
+  <% comments.each do |comment| %>
+    <% if comment.id.present? %>
+      <li>
+        <p><%= simple_format(comment.comment) %></p>
+        <p>
+          <%= comment.name %>
+          </p>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
+<p>
+  投稿できませんでした
+  </p>

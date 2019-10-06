@@ -18,6 +18,8 @@ class ColumsController < ApplicationController
   end
 
   def show
+    @comments = @colum.comments
+    @comment = @colum.comments.build
   end
 
   private

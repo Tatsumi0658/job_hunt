@@ -2,4 +2,12 @@
   <%= @colum.title %>
   <%= @colum.name %>
   <%= simple_format(@colum.content) %>
+
+  <div id="comments_area">
+    <!-- 投稿されたコメント一覧をブログの詳細ページに表示するためのrender -->
+    <%= render partial: 'comments/index', locals: { comments: @comments, colum: @colum } %>
+  </div>
+
+  <!-- コメント入力欄をブログの詳細ページに表示するためのrender -->
+  <%= render partial: 'comments/form', locals: { comment: @comment, colum: @colum } %>
 </div>
