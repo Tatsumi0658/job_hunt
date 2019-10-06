@@ -1,0 +1,5 @@
+<% @colums.each do |colum| %>
+  <%= colum.title %>
+  <%= colum.name %>
+  <%= link_to "show", colum_path(colum.id) %>
+<% end %>

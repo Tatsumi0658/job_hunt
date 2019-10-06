@@ -1,0 +1,23 @@
+<%= form_with(model: @colum, local: true) do |f| %>
+  <% if @colum.errors.any? %>
+    <% @colum.errors.full_messages.each do |msg| %>
+      <%= msg %><br>
+    <% end %>
+  <% end %>
+  <div class = field>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class = field>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class = field>
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+  </div>
+
+    <%= f.submit %>
+<% end %>
