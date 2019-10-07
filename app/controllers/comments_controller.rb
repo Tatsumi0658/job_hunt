@@ -2,10 +2,13 @@ class CommentsController < ApplicationController
   def create
     @colum = Colum.find(params[:colum_id])
     @comment = @colum.comments.build(comment_params)
+    @comments = @colum.comments
     respond_to do |format|
       if @comment.save
+        @count = @comments.count
         format.js { render :index }
       else
+        @count = @comments.count
         format.js { render :error }
       end
     end

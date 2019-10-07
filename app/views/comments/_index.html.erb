@@ -1,4 +1,5 @@
 <div class="comment-list">
+  <h4>コメント<%= @count %>件</h4>
   <% comments.each do |comment| %>
     <% if comment.id.present? %>
       <div class="comment-item">

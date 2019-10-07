@@ -17,7 +17,8 @@
  html,body{
    margin: 0;
    padding: 0;
-   line-height: 2;
+   line-height: 1.6;
+   color: #333;
  }
  header{
    background: rgba(0,146,199,1);
@@ -35,10 +36,10 @@
  }
  .colum-item{
    border-bottom: 1px solid #eee;
-   margin: 1.4rem 0;
+   margin: 16px 0;
    padding: 0 1.0rem .5rem;
  }
- .colum_title a{
+ .colum-item a{
    color: #333;
    text-decoration: none;
  }
@@ -50,14 +51,16 @@
  }
  .single-colum_area{
    margin: 0 auto;
+   padding-top: 16px;
  }
  .single-colum_title{
-   color: #333;
    font-size: 1.8rem;
  }
  .single-colum_author, .single-colum_content, .comment_content{
-   color: #333;
    font-size: 1.0rem;
+ }
+ .single-colum_author{
+   font-size: .9rem;
  }
  .single-colum_content{
    margin: 1.0rem 0;
@@ -71,8 +74,16 @@
    color: #333;
    margin: 8px 0;
  }
+ #comments_area{
+   margin-top: 30px;
+   border-top: 1px solid #eee;
+   padding-top: 30px;
+ }
  .comment-field{
    margin: 8px 0;
+ }
+ .comment_author{
+   font-size: .8rem;
  }
  #comment_name, #comment_comment{
    border: none;
@@ -83,6 +94,25 @@
  }
  #comment_comment{
    height: 60px;
+ }
+ .comment-item{
+   padding: 14px 0;
+ }
+ #comment_form{
+   margin-top: 30px;
+ }
+ .favorite-colum-list_title{
+   background: #eee;
+   color: #333;
+   text-align: center;
+   padding: 1rem 0;
+ }
+ .favorite-colum-item{
+   border-bottom: 1px solid #eee;
+   color: #333;
+   display: block;
+   padding: 1.0rem;
+   text-decoration: none;
  }
  @media screen and (max-width: 767px){
    .container{
@@ -99,6 +129,22 @@
  }
  @media screen and (min-width: 1025px){
    .container{
+     display: flex;
+     flex-wrap: wrap;
      width: 1024px;
+   }
+   main{
+     box-sizing: border-box;
+     width: 65%;
+   }
+   aside{
+     box-sizing: border-box;
+     width: 35%;
+   }
+   #favorite-colum-list{
+     padding: 16px 1.5rem 0;
+   }
+   .favorite-colum-item{
+     padding: 1.0rem .3rem;
    }
  }

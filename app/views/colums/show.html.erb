@@ -8,5 +8,7 @@
     <%= render partial: 'comments/index', locals: { comments: @comments, colum: @colum } %>
   </div>
 
-  <%= render partial: 'comments/form', locals: { comment: @comment, colum: @colum } %>
+  <div id="comment_form">
+    <%= render partial: 'comments/form', locals: { comment: @comment, colum: @colum } %>
+  </div>
 </div>

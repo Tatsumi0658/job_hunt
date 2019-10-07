@@ -20,6 +20,7 @@ class ColumsController < ApplicationController
   def show
     @comments = @colum.comments
     @comment = @colum.comments.build
+    @count = @comments.count
   end
 
   private
